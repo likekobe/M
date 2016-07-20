@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="HourEnergyDataTaskTrigger"></ref>
+				<ref bean="HourAllDataTaskTrigger"></ref>
+				
+			</list>
+		</property>
+	</bean>
+
+	<!-- like begin   -->
+	
+		<!-- 每天0点采集当天能耗数据  -->
+		<bean id="HourEnergyDataTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="hourDataReportDBTask" />
+			<property name="cronExpression" value="0 30 0 * * ?" />
+		</bean>
+		
+		<bean id="hourDataReportDBTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="gatherEnergyDataJobService" />
+			<property name="targetMethod" value="jobGatherEnergyData" />
+			<property name="concurrent" value="false" />
+		</bean>
+	
+		<!-- 每小时采集上报的数据 -->
+		<bean id="HourAllDataTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+			<property name="jobDetail" ref="hourAllDataDBTask" />
+			<property name="cronExpression" value="0 0/60 * * * ?" />
+		</bean>
+		
+		<bean id="hourAllDataDBTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+			<property name="targetObject" ref="gatherAcRealTimeDataJobService" />
+			<property name="targetMethod" value="jobGatherData" />
+			<property name="concurrent" value="false" />
+		</bean>
+		
+	<!-- like end 每小时采集上报的能耗数据 -->
+	
+</beans>

@@ -1,0 +1,4 @@
+alter table US_ELECMETER_INFO drop COLUMN IS_VALUE; 
+alter table US_ZWJ drop COLUMN IS_VALUE; 
+alter table US_OLD_METER_INFO drop COLUMN CHANGE_VALUE_TIME; 
+alter table US_OLD_METER_INFO drop COLUMN ZWJ_ID; 

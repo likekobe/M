@@ -1,0 +1,746 @@
+spool initdata.log
+prompt Loading SYS_ALARM_CODE...
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000006', 6, 1, '0205', '[电]电定额报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000007', 7, 1, '0201', '[电]电平衡报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000008', 8, 1, '0202', '[电]电表报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000009', 9, 1, '0203', '[电]中位机报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000010', 10, 1, '0204', '[电]网关报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000011', 11, 1, '0301', '[水]水平衡报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000012', 12, 1, '0302', '[水]水表报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000013', 13, 1, '0303', '[水]中位机报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000014', 14, 1, '0304', '[水]网关报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000015', 15, 1, '0401', '[气]水平衡报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000016', 16, 1, '0402', '[气]水表报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000017', 17, 1, '0403', '[气]中位机报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000018', 18, 1, '0404', '[气]网关报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000019', 19, 1, '0501', '[暖]水平衡报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000020', 20, 1, '0502', '[暖]水表报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000021', 21, 1, '0503', '[暖]中位机报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000022', 22, 1, '0504', '[暖]网关报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000023', 23, 1, '0205', '[电]建筑能耗报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000024', 24, 1, '0305', '[水]建筑能耗报警类型');
+insert into SYS_ALARM_CODE (ID, ALARM_TYPE, ALARM_LEVEL, CODE, INFOR)
+values ('SYSTEM00000000000000000000000025', 25, 1, '0206', '[电]部门能耗报警类型');
+prompt 16 records loaded
+prompt Loading US_ALARM_PROCESS_INFOR...
+prompt Table is empty
+prompt Loading US_USER_INFOR...
+insert into US_USER_INFOR (ID, NAME, PASSWORD, CREATE_DATE, MODIFY_DATE, USERNAME, TELEPHONE, EMAIL, IS_DISABLE)
+values ('SYSTEM00000000000000000000000001', 'admin', '123456', '2011-10-09 00:00:00', '2011-10-09 00:00:00', '系统管理员', '13800138000', 'admin@ccc.com', 'N');
+prompt 1 records loaded
+
+
+
+prompt Loading US_METERLEVEL...
+insert into US_METERLEVEL(ID,SHOWNAME,METER_CLASSIFY)
+values ('11198768768766hhhjjkjhggnjjikiii','一级表',1);
+insert into US_METERLEVEL(ID,SHOWNAME,METER_CLASSIFY)
+values ('11198768768766hhhjjkjhggnjjikiia','二级表',1);
+insert into US_METERLEVEL(ID,SHOWNAME,METER_CLASSIFY)
+values ('11198768768766hhhjjkjhggnjjikiib','三级表',1);
+insert into US_METERLEVEL(ID,SHOWNAME,METER_CLASSIFY)
+values ('11198768768766hhhjjkjhggnjjikiic','四级表',1);
+insert into US_METERLEVEL(ID,SHOWNAME,METER_CLASSIFY)
+values ('11198768768766hhhjjkjhggnjjikiid','五级表',1);
+prompt 5 records loaded
+
+prompt Loading US_ADDR_ORG_LEVEL...
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (207, '学校校区', '', 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (206, '部门', '', 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (205, '室', 3, 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (202, '学校机关','', 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (203, '二级学院', '', 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (204, '科', 2, 1);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (101, '学校', 1, 0);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (102, '校区', 2, 0);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (103, '楼', 3, 0);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (104, '层', 4, 0);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (105, '房间', 5, 0);
+insert into US_ADDR_ORG_LEVEL (LEVEL_CODE, LEVEL_NAME, LEVEL_NUMBER, LEVEL_TYPE)
+values (201, '学校', 1, 1);
+prompt 10 records loaded
+prompt Loading US_ZWJ...
+prompt Table is empty
+prompt Loading SYS_METER_TYPE...
+insert into  SYS_METER_TYPE (ID,SHOWNAME,METER_CLASSIFY,CODE)
+values ('poiuytrelkjhgfdsmnbvcewertyyuihg','V3.0多功能三相电表',1,1);
+insert into  SYS_METER_TYPE (ID,SHOWNAME,METER_CLASSIFY,CODE)
+values ('8uhb7ygtyytrehgfdhgfhgfdsddsdc1y','迪纳超声波水表',0,7);
+prompt 3 records loaded
+
+
+prompt Loading SYS_WATER_METER_CALIBER...
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000003', 'DN40', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000004', 'DN50', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000002', 'DN60', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000005', 'DN65', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000001', 'DN80', 10);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000006', 'DN90', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000007', 'DN100', 1);
+insert into SYS_WATER_METER_CALIBER (ID, CALIBER, MEASURING_UNIT)
+values ('00000000000000000000000000000008', 'DN150', 1);
+prompt 2 records loaded
+
+
+
+
+
+prompt Loading SYS_FUNCTION...
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000001', '-1                              ', '能耗平台系统', null, 'N', '01', 1);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000101', 'SYSTEM00000000000000000000000001', '总览', 'goSchoolOverRead.action', 'N', '0101', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000102', 'SYSTEM00000000000000000000000001', '能耗实时监测', 'goAddrMonitor.action', 'N', '0102', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000103', 'SYSTEM00000000000000000000000001', '能源数据统计', 'firstToEnergyConsumption_year.action', 'N', '0103', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000104', 'SYSTEM00000000000000000000000001', '能耗分析引擎', 'toEnergyAnalysis_classify.action', 'N', '0104', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000105', 'SYSTEM00000000000000000000000001', '能耗数据上报', 'jsp/platform/energyreport.jsp', 'N', '0105', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000106', 'SYSTEM00000000000000000000000001', '能源管理专家', 'toEnergyForecast.action', 'N', '0106', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000107', 'SYSTEM00000000000000000000000001', '能源定额管理', 'toQuotaSet.action', 'N', '0107', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000108', 'SYSTEM00000000000000000000000001', '能源审计报告', 'toEnergyAuditReportFrame.action', 'N', '0108', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000109', 'SYSTEM00000000000000000000000001', '学校能耗公示', 'jsp/platform/WebOfCommunity.jsp', 'N', '0109', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000110', 'SYSTEM00000000000000000000000001', '其他系统集成', null, 'N', '0110', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000111', 'SYSTEM00000000000000000000000001', '平台系统管理', 'goUserAndRole.action', 'N', '0111', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000000112', 'SYSTEM00000000000000000000000001', '平台使用指南', 'toDownLoadSpecification.action', 'Y', '0112', 2);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010101', 'SYSTEM00000000000000000000000101', '学校概况', 'goSchoolOverview.action', 'N', '010101', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010102', 'SYSTEM00000000000000000000000101', '能耗地图导航', 'jsp/map/map_total.jsp', 'Y', '010102', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010103', 'SYSTEM00000000000000000000000101', '分类能耗', 'showClassify.action', 'N', '010103', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010104', 'SYSTEM00000000000000000000000101', '分项能耗', 'showElecMeasure.action', 'N', '010104', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010105', 'SYSTEM00000000000000000000000101', '水耗能耗TOP10', 'jsp/platform/TopTen.jsp', 'N', '010105', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010106', 'SYSTEM00000000000000000000000101', '告警信息', 'toAlarmMessage.action', 'N', '010106', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010201', 'SYSTEM00000000000000000000000102', '建筑能耗实时监测', 'goAddrMonitor.action', 'N', '010201', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010202', 'SYSTEM00000000000000000000000102', '部门能耗实时监测', 'toOrgMonitor.action', 'N', '010202', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010203', 'SYSTEM00000000000000000000000102', '分项能耗实时监测', 'goMesureMonitor.action', 'N', '010203', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010204', 'SYSTEM00000000000000000000000102', '表具能耗实时监测', 'jsp/platform/ElecWaterMonitor.jsp', 'N', '010204', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010205', 'SYSTEM00000000000000000000000102', '能耗平衡监测', 'jsp/platform/balanceMonitor.jsp', 'N', '010205', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010206', 'SYSTEM00000000000000000000000102', '综合故障分析', 'FailureAnalysisGetElecTable.action', 'N', '010206', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010301', 'SYSTEM00000000000000000000000103', '规范统计年报', 'firstToEnergyConsumption_year.action', 'N', '010301', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010302', 'SYSTEM00000000000000000000000103', '日月查询报表', 'firstToEnergyConsumption_dayOrMonth.action', 'N', '010302', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010303', 'SYSTEM00000000000000000000000103', '分类能耗统计', 'jsp/platform/showClassifyCountMonthAndYear.jsp', 'N', '010303', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010304', 'SYSTEM00000000000000000000000103', '分项能耗统计', 'jsp/platform/showMesureCountMonthAndYear.jsp', 'N', '010304', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010305', 'SYSTEM00000000000000000000000103', '建筑查询报表', 'toAddrReports.action', 'N', '010305', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010306', 'SYSTEM00000000000000000000000103', '部门查询报表', 'toOrgReports.action', 'N', '010306', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010307', 'SYSTEM00000000000000000000000103', '表具查询报表', 'toMeterReports.action', 'N', '010307', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010308', 'SYSTEM00000000000000000000000103', '统计汇总报表', 'orgDetailReports.action', 'N', '010308', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010401', 'SYSTEM00000000000000000000000104', '分类能耗分析', 'toEnergyAnalysis_classify.action', 'N', '010401', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010402', 'SYSTEM00000000000000000000000104', '建筑分类能耗分析', 'showSingleAddrClassifyPage.action', 'N', '010402', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010403', 'SYSTEM00000000000000000000000104', '部门分类能耗分析', 'showSingleOrgClassifyPage.action', 'N', '010403', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010404', 'SYSTEM00000000000000000000000104', '分项能耗分析', 'toSubentryAnlysis.action', 'N', '010404', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010405', 'SYSTEM00000000000000000000000104', '建筑分项能耗分析', 'showSingleAddrMesurePage.action', 'N', '010405', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010407', 'SYSTEM00000000000000000000000104', '表具能耗分析', 'toMeterAnalysis.action', 'N', '010407', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010408', 'SYSTEM00000000000000000000000104', '同类建筑排名', 'goSimBuildRank.action', 'N', '010408', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010409', 'SYSTEM00000000000000000000000104', '能耗数据日历', 'toEnergyCalendar.action', 'N', '010408', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010501', 'SYSTEM00000000000000000000000105', '能耗数据上报', 'jsp/platform/energyreport.jsp', 'N', '010501', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010601', 'SYSTEM00000000000000000000000106', '能源预测', 'toEnergyForecast.action', 'N', '010601', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010602', 'SYSTEM00000000000000000000000106', '节能诊断', 'showEnergyDiagnose.action', 'N', '010602', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010603', 'SYSTEM00000000000000000000000106', '碳中和预算', 'showCarbonCount.action', 'N', '010603', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010604', 'SYSTEM00000000000000000000000106', '节能测评雷达图', 'showEnergyScoreRafar.action', 'N', '010604', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010605', 'SYSTEM00000000000000000000000106', '专家咨询', 'showExpertAdvice.action', 'N', '010605', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010702', 'SYSTEM00000000000000000000000107', '定额设定', 'toQuotaSet.action', 'N', '010701', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010703', 'SYSTEM00000000000000000000000107', '定额调整', 'toQuotaModify.action', 'N', '010702', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010704', 'SYSTEM00000000000000000000000107', '能源管理图表', 'toQuotaPic.action', 'N', '010703', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010801', 'SYSTEM00000000000000000000000108', '能源审计报告', 'toEnergyAuditReportFrame.action', 'N', '010801', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010802', 'SYSTEM00000000000000000000000108', '能源审计辅助', 'jsp/platform/EnergyAuditAid_All.jsp', 'N', '010802', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010901', 'SYSTEM00000000000000000000000109', '社会公示', 'jsp/platform/WebOfCommunity.jsp', 'N', '010901', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010902', 'SYSTEM00000000000000000000000109', '校内公示', 'toSchoolNotice.action', 'N', '010902', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000010903', 'SYSTEM00000000000000000000000109', '能耗网站', '', 'Y', '010903', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011001', 'SYSTEM00000000000000000000000110', '低压配电系统', null, 'N', '011001', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011002', 'SYSTEM00000000000000000000000110', '教室照明系统', null, 'N', '011002', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011003', 'SYSTEM00000000000000000000000110', '路灯管理系统', null, 'N', '011003', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011004', 'SYSTEM00000000000000000000000110', '收费系统', null, 'N', '011004', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011101', 'SYSTEM00000000000000000000000111', '用户权限管理', 'goUserAndRole.action', 'N', '011101', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011102', 'SYSTEM00000000000000000000000111', '数据字典维护', 'goDataDictionary.action', 'N', '011102', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011103', 'SYSTEM00000000000000000000000111', '运行参数管理', 'getRuntimeList.action', 'N', '011103', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011104', 'SYSTEM00000000000000000000000111', '部门信息管理', 'jsp/platform/OrganFrame.jsp', 'N', '011104', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011105', 'SYSTEM00000000000000000000000111', '建筑信息管理', 'jsp/platform/AddrFrame.jsp', 'N', '011105', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011106', 'SYSTEM00000000000000000000000111', '人员账户管理', 'toPersonnelInfor.action', 'Y', '011106', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011107', 'SYSTEM00000000000000000000000111', '设备管理', '', 'Y', '011107', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011108', 'SYSTEM00000000000000000000000111', '网关串口管理', 'showNetgate.action', 'N', '011108', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011109', 'SYSTEM00000000000000000000000111', '中位机管理', 'listZwjInfo.action', 'Y', '011109', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011110', 'SYSTEM00000000000000000000000111', '学校信息管理', 'toSchoolInfo.action', 'Y', '011110', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011111', 'SYSTEM00000000000000000000000111', '表具管理', 'goAllMeter.action', 'N', '011111', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011112', 'SYSTEM00000000000000000000000111', '告警设置', 'jsp/platform/AlarmLimitInfoSet.jsp', 'N', '011112', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011113', 'SYSTEM00000000000000000000000111', '表具删除', 'jsp/platform/meterdelete.jsp', 'N', '011113', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011114', 'SYSTEM00000000000000000000000111', '平衡设置', 'jsp/platform/allbalanceset.jsp', 'N', '011114', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011115', 'SYSTEM00000000000000000000000111', '手工输入', 'ToHandMadeList.action', 'N', '011115', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011333', 'SYSTEM00000000000000000000000111', '楼栋分项计算关系设置', 'jsp/platform/buildingclassify.jsp', 'N', '011116', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011116', 'SYSTEM00000000000000000000000111', '部门计算关系设置', 'jsp/platform/orgcount.jsp', 'N', '011117', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011117', 'SYSTEM00000000000000000000000111', '能源专家基础数据', 'jsp/platform/energydataentry.jsp', 'N', '011118', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011125', 'SYSTEM00000000000000000000000111', '地图导航设置', 'showMapSetPage.action', 'Y', '011119', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011118', 'SYSTEM00000000000000000000000111', '基础数据导入导出', '', 'Y', '011120', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011201', 'SYSTEM00000000000000000000000112', '平台使用指南', 'toDownLoadSpecification.action', 'Y', '011201', 3);
+insert into SYS_FUNCTION (id, super_id, showname, url, is_disable, code, fun_level)
+values ('SYSTEM00000000000000000000011202', 'SYSTEM00000000000000000000000112', '网关使用手册', 'toDownLoadGateWayManual.action', 'Y', '011202', 3);
+commit;
+
+prompt 49 records loaded
+
+
+
+
+prompt Loading US_DICTIONARY_TYPE...
+insert into US_DICTIONARY_TYPE (ID, DIC_TYPE_NAME, DIC_TYPE_CODE, REMARK)
+values ('12345678901234567890123456789001', '部门属性', '0001', '初始值');
+insert into US_DICTIONARY_TYPE (ID, DIC_TYPE_NAME, DIC_TYPE_CODE, REMARK)
+values ('12345678901234567890123456789002', '建筑属性', '0002', '初始值');
+insert into US_DICTIONARY_TYPE (ID, DIC_TYPE_NAME, DIC_TYPE_CODE, REMARK)
+values ('12345678901234567890123456789004', '水表用水分类', '0004', '初始值');
+insert into US_DICTIONARY_TYPE (ID, DIC_TYPE_NAME, DIC_TYPE_CODE, REMARK)
+values ('12345678901234567890123456789005', '电表分类', '0005', '初始值');
+prompt 4 records loaded
+
+
+
+prompt Loading US_ROLE...
+insert into US_ROLE (ID, NAME, REMARK)
+values ('SYSTEM00000000000000000000000001', '系统管理员', '系统管理员。');
+prompt 2 records loaded
+prompt Loading US_MID_FUNCTION_ROLE...
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000101', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000001');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000102', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000101');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000103', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010101');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000104', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010102');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000105', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010103');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000106', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010104');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000107', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010105');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000108', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010106');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000109', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000102');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000110', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010201');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000111', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010202');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000112', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010203');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000113', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010204');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000114', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010205');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000115', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010206');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000116', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000103');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000117', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010301');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000118', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010302');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000119', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010303');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000120', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010304');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000121', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010305');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000122', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010306');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000123', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010307');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000124', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000104');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000125', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010401');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000126', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010402');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000127', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010403');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000128', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010404');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000129', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010405');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000131', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010407');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000132', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010408');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000180', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010409');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000133', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000105');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000134', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010501');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000135', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000106');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000136', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010601');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000137', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010602');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000138', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010603');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000139', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010604');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000140', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010605');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000141', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000107');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000143', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010702');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000144', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010703');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000145', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010704');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000146', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000108');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000147', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010801');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000148', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010802');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000149', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000109');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000150', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010901');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000151', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010902');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000152', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000010903');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000153', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000110');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000154', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011001');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000155', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011002');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000156', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011003');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000157', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011004');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000158', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000111');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000159', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011101');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000160', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011102');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000161', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011103');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000162', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011104');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000163', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011105');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000164', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011106');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000165', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011107');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000166', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011108');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000167', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011109');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000168', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011110');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000169', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011111');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000170', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011112');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000171', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011113');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000172', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011114');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000173', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011115');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000174', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011116');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000175', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011117');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000176', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011118');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000190', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011333');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000177', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000112');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000178', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011201');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000179', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011202');
+insert into US_MID_FUNCTION_ROLE (id, role_id, function_id)
+values ('D0783C7F7D7A162FE040A8C0C9000181', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000011125');
+commit;
+prompt 79 records loaded
+
+prompt Loading US_MID_USER_ROLE...
+insert into US_MID_USER_ROLE (ID, USER_ID, ROLE_ID)
+values ('SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000001', 'SYSTEM00000000000000000000000001');
+prompt 1 records loaded
+prompt Loading US_OLD_METER_INFO...
+prompt Table is empty
+prompt Loading US_RUNTIME_PAR...
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000005', null, '电标煤转换', 6, '0.1229', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000006', null, '网关断电时间', 6, '2', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000007', null, '建筑TOP10', 6, '103', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000008', null, '部门TOP10', 6, '203', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000009', null, '学校区域编码', 6, '000000', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000010', null, '表具出错告警轮询间隔时间', 6, '3', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000011', null, '表具出错告警百分比', 6, '50', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000012', null, '部门电定额所设年', 6, '2012', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000013', null, '对比个数', 0, '10', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000014', null, '热标煤转换', 6, '1.229', 'N');
+insert into us_runtime_par (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000015', '', '能源预测面积基数', 0, '759997.25', 'N');
+insert into us_runtime_par (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000016', '', '能源预测人数基数', 0, '34830', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000017', null, '咨询电话', 0, '111', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000018', null, '联系人', 0, '管理员', 'N');
+insert into US_RUNTIME_PAR (ID, USER_ID, PAR_NAME, PAR_TYPE, PAR_VALUE, IS_DISABLE)
+values ('00000000000000000000000000000019', null, '邮箱', 0, '111@123.com', 'N');
+prompt 15 records loaded
+prompt Loading US_SHORTCUT_MENU...
+prompt Table is empty
+prompt Loading US_TIMETASK...
+insert into us_timetask values('00000000000000000000000000000011','0 0 0 1 * ?','电平衡时间','');
+insert into us_timetask values('00000000000000000000000000000012','0 0 0 1 * ?','水平衡时间','');
+prompt 2 records loaded
+
+
+prompt Loading US_ENERGY_SCORE_INFOR...
+insert into US_ENERGY_SCORE_INFOR (ID, WATER_DEVICE, ELEC_DEVICE, ENERGY_DEVICE, IN_DEVICE, COLLEGE_ELEC_DEVICE, COLLEGE_WATER_DEVICE, STUDENT_ELEC_DEVICE, STUDENT_WATER_DEVICE, SCHOOL_ELEC_DEVICE, SCHOOL_WATER_DEVICE, INWATER_DEVICE, SOLAR_ELEC_SYSTEM, SOLAR_WATER_SYSTEM, OTHER_ENERGY, PROJECT_EXAMINE_SYSTEM, FACILITY_EXAMINE_SYSTEM, STATISTICS_EXAMINE_SYSTEM, DATASHARE_EXAMINE_SYSTEM, DEMAND_EXAMINE_SYSTEM, PURCHASE_EXAMINE_SYSTEM, ENVIRONMENT_EXAMINE_SYSTEM, SET_LEVELSCHARGE_PERSON, SET_SCHOOLCHARGE_PERSON, SET_SCHOOL_CMC, CHARGE_PERSON_QUALITIES, ELEC_SAVING_EFFECT, WATER_SAVING_EFFECT, WARM_SAVING_EFFECT, INWATER_RATE, OTHER_SAVING_EFFECT, NEW_SYSTEM_IMPLEMENT, EDIT_SYSTEM_IMPLEMENT, RUN_SYSTEM_IMPLEMENT, MONITOR_SYSTEM_IMPLEMENT, TEACHING_ADDR_MEASURE, OFFICE_ADDR_MEASURE, RESEARCH_ADDR_MEASURE, STUDENT_ADDR_MEASURE, CANTEEN_ADDR_MEASURE, CLASS_AND_LECTURE, RESEARCH_AND_PRACTICE, PROPAGANDA_AND_UNIVERSAL)
+values ('ENERGYSCORE000000000000000000000', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+commit;
+prompt 1 records loaded
+
+prompt Loading US_METER_MEASURE...
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000101', '室内照明', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000102', '走廊和应急照明', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000103', '室外景观照明', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000104', '办公设备插座', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000201', '冷热站', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000202', '空调末端', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000203', '分散空调', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000301', '电梯', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000302', '水泵', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000303', '通风机', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000304', '电开水机', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000401', '信息中心', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000402', '厨房设备', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('00000000000000000000000000000403', '特殊用途设备', 1);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('52ac306a389427f901389ef518692afd', '自来水', 0);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('52ac306a389427f901389ef549862afe', '自备水', 0);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('52ac306a389427f901389ef58dba2aff', '自用水', 0);
+insert into US_METER_MEASURE (ID, SHOWNAME, METER_CLASSSIFY)
+values ('52ac306a389427f901389ef5c14b2b00', '中水', 0);
+
+prompt Loading US_SCHOOL_GREEN_AREA...
+insert into US_SCHOOL_GREEN_AREA (ID, BROAD_DECIDUOUS_FOREST, BROAD_EVERGREEN_FOREST, CONIFEROUS_FOREST, BUSHWOOD, LAWN, WEEK_TARGET, MONTH_TARGET, YEAR_TARGET)
+values ('SYSTEM00000000000000000000000001', 0, 0, 0, 0, 0, 75, 72, 65);
+
+prompt Loading US_ENERGY_FORECASTING_PARA...
+insert into us_energy_forecasting_para (ID, JAN_AREA, JAN_PEOCOUNT, FEB_AREA, FEB_PEOCOUNT, MAR_AREA, MAR_PEOCOUNT, APR_AREA, APR_PEOCOUNT, MAY_AREA, MAY_PEOCOUNT, JUNE_AREA, JUNE_PEOCOUNT, JULY_AREA, JULY_PEOCOUNT, AUG_AREA, AUG_PEOCOUNT, SEPT_AREA, SEPT_PEOCOUNT, OCT_AREA, OCT_PEOCOUNT, NOV_AREA, NOV_PEOCOUNT, DEC_AREA, DEC_PEOCOUNT, COEFFICIENT)
+values ('11111111111111111111111111111111', 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 0.00, 0, 1.00); 
+
+
+prompt Loading US_REPORT_SET...
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000001', '部门能耗告警', 1);
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000002', '建筑能耗告警', 1);
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000003', '定额告警', 1);
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000004', '网关告警', 1);
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000005', '平衡告警', 1);
+insert into US_REPORT_SET (id, name, day_number) values ('SYSTEM00000000000000000000000006', '表具告警', 1);
+
+prompt Loading US_MAPSET_INFOR...
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000101', '今日用电', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000102', '今日用水', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000103', '建筑面积', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000104', '单位能耗', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000105', '总人数', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000106', '人均能耗', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000107', '总能耗', 'Y');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000108', '建筑名称', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000109', '建筑编号', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000110', '建筑高度', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000111', '建筑楼层', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000112', '建筑负责人', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000113', '建筑使用年份', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000114', '主要用能方式', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000115', '能源经济指标', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000116', '建筑分项', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000117', '照明与插座用电', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000118', '空调用电', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000119', '动力用电', 'N');
+insert into us_mapset_infor (MAPSET_ID, MAPSET_NAME, IS_SELECTED)
+values ('00000000000000000000000000000120', '特殊用电', 'N');
+prompt 20 records loaded
+
+prompt Loading US_MID_MAPADDR_PLATFORMADDR...
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1001', '001', '', '学生宿舍01号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1002', '002', '', '学生宿舍02号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1003', '003', '', '学生宿舍03号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1004', '004', '', '学生宿舍04号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1005', '005', '', '学生宿舍05号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1006', '006', '', '学生宿舍06号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1007', '007', '', '学生宿舍07号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1008', '008', '', '学生宿舍08号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1009', '009', '', '学生宿舍09号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1010', '010', '', '学生宿舍10号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1011', '011', '', '学生宿舍11号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1012', '012', '', '学生宿舍12号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1013', '013', '', '学生宿舍13号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1014', '014', '', '学生宿舍14号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1015', '015', '', '校医院');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1016', '016', '', '后勤办公楼');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1017', '017', '', '体育场');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1018', '018', '', '图书馆');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1019', '019', '', '食堂');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1020', '020', '', '教学楼01号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1021', '021', '', '教学楼02号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1022', '022', '', '教学楼03号');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1023', '023', '', '实训楼');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1024', '024', '', '艺术中心');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1025', '025', '', '行政楼');
+insert into us_mid_mapaddr_platformaddr (ID, ADDR_NUMBER, ADDR_ID, ADDR_NAME)
+values ('40288017388ddf5e01388de2tttt1026', '026', '', '交流中心');
+prompt 26 records loaded
+
+
+
+/**教室照明部分开始
+**/
+insert into sys_function values('SYSTEM00000000000000000000000008','-1','教室照明系统','','Y','08',1);
+insert into sys_function values('SYSTEM00000000000000000000000801','SYSTEM00000000000000000000000008','实时监测','','Y','0801',2);
+insert into sys_function values('SYSTEM00000000000000000000000802','SYSTEM00000000000000000000000008','综合查询','','Y','0802',2);
+insert into sys_function values('SYSTEM00000000000000000000000803','SYSTEM00000000000000000000000008','节能设置','','Y','0803',2);
+insert into sys_function values('SYSTEM00000000000000000000000804','SYSTEM00000000000000000000000008','节能评估','','Y','0804',2);
+insert into sys_function values('SYSTEM00000000000000000000000805','SYSTEM00000000000000000000000008','基础信息','','Y','0805',2);
+insert into sys_function values('SYSTEM00000000000000000000080101','SYSTEM00000000000000000000000801','照明监测','toLightingMonitoring.action','Y','080101',3);
+insert into sys_function values('SYSTEM00000000000000000000080102','SYSTEM00000000000000000000000801','设备监测','toDeviceMonitor.action','Y','080102',3);
+insert into sys_function values('SYSTEM00000000000000000000080103','SYSTEM00000000000000000000000801','设备控制','goEquipmentControlAll.action','Y','080103',3);
+insert into sys_function values('SYSTEM00000000000000000000080201','SYSTEM00000000000000000000000802','现状查询','currentJSZM.action','Y','080201',3);
+insert into sys_function values('SYSTEM00000000000000000000080202','SYSTEM00000000000000000000000802','历史查询','firstToShowOperatingLog.action','Y','080202',3);
+insert into sys_function values('SYSTEM00000000000000000000080301','SYSTEM00000000000000000000000803','常用设置','goNomalSetAll.action','Y','080301',3);
+insert into sys_function values('SYSTEM00000000000000000000080302','SYSTEM00000000000000000000000803','设备设置','showConntrollerSetList.action','Y','080302',3);
+insert into sys_function values('SYSTEM00000000000000000000080401','SYSTEM00000000000000000000000804','功率节能','firstToShowEnergySaving.action','Y','080401',3);
+insert into sys_function values('SYSTEM00000000000000000000080402','SYSTEM00000000000000000000000804','电量节能','showPowerEnergyXML.action','Y','080402',3);
+insert into sys_function values('SYSTEM00000000000000000000080501','SYSTEM00000000000000000000000805','教室维护','toClassroomManage.action','Y','080501',3);
+insert into sys_function values('SYSTEM00000000000000000000080502','SYSTEM00000000000000000000000805','主控管理','toFindController.action','Y','080502',3);
+insert into sys_function values('SYSTEM00000000000000000000080503','SYSTEM00000000000000000000000805','从机管理','getSlaveInfoListByPage.action','Y','080503',3);
+insert into sys_function values('SYSTEM00000000000000000000080504','SYSTEM00000000000000000000000805','传感器管理','getSensorInfoListByPage.action','Y','080504',3);
+
+
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA72','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000008');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA75','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000801');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA76','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000802');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA77','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000803');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA78','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000804');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA79','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000000805');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA80','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080101');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA81','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080102');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA82','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080103');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA83','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080201');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA84','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080202');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA85','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080301');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA86','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080302');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA87','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080401');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA88','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080402');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA89','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080501');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA90','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080502');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA91','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080503');
+insert into us_mid_function_role values('0735A61FA53E455A86A3080BF069DA92','SYSTEM00000000000000000000000001','SYSTEM00000000000000000000080504');
+
+
+insert into sys_jszm_device_type values('SYSTEM00000000000000000000000001','SL8630','1');
+insert into sys_jszm_device_type values('SYSTEM00000000000000000000000002','SL8406','2');
+insert into sys_jszm_device_type values('SYSTEM00000000000000000000000003','SL8418','3');
+
+insert into us_timetask values('00000000000000000000000000000013','0 0/10 * * * ?','教室照明','');
+
+delete from us_jszm_gametheory_infor  ;
+commit;
+insert into us_jszm_gametheory_infor (GAMETHEORY_ID, CONTROLLER_ID, SUMMER_BEGIN_MONTH, SUMMER_BEGIN_DAY, SUMMER_END_MONTH, SUMMER_END_DAY, SUMMER_MORNING_BEGINHOUR, SUMMER_MORNING_BEGINMIN, SUMMER_MORNING_ENDHOUR, SUMMER_MORNING_ENDMIN, SUMMER_AFTERNOON_BEGINHOUR, SUMMER_AFTERNOON_BEGINMIN, SUMMER_AFTERNOON_ENDHOUR, SUMMER_AFTERNOON_ENDMIN, SUMMER_NIGHT_BEGINHOUR, SUMMER_NIGHT_BEGINMIN, SUMMER_NIGHT_ENDMIN, SUMMER_NIGHT_ENDHOUR, WINTER_BEGIN_MONTH, WINTER_BEGIN_DAY, WINTER_END_MONTH, WINTER_END_DAY, WINTER_MORNING_BEGINHOUR, WINTER_MORNING_BEGINMIN, WINTER_MORNING_ENDHOUR, WINTER_MORNING_ENDMIN, WINTER_AFTERNOON_BEGINHOUR, WINTER_AFTERNOON_BEGINMIN, WINTER_AFTERNOON_ENDHOUR, WINTER_AFTERNOON_ENDMIN, WINTER_NIGHT_BEGINHOUR, WINTER_NIGHT_BEGINMIN, WINTER_NIGHT_ENDHOUR, WINTER_NIGHT_ENDMIN, ILLUMINATION_OPEN, ILLUMINATION_CLOSE, BACKLASH_TOTAL, ILLUMINATION_DELAY)
+values ('00000000000000000000000000000000', '', '05', '01', '09', '30', '08', '00', '12', '00', '14', '30', '18', '00', '19', '00', '00', '22', '10', '01', '04', '30', '08', '00', '11', '30', '14', '00', '17', '30', '19', '00', '22', '00', 150, 250, 50, 15);
+
+insert into us_jszm_gametheory_infor (GAMETHEORY_ID, CONTROLLER_ID, SUMMER_BEGIN_MONTH, SUMMER_BEGIN_DAY, SUMMER_END_MONTH, SUMMER_END_DAY, SUMMER_MORNING_BEGINHOUR, SUMMER_MORNING_BEGINMIN, SUMMER_MORNING_ENDHOUR, SUMMER_MORNING_ENDMIN, SUMMER_AFTERNOON_BEGINHOUR, SUMMER_AFTERNOON_BEGINMIN, SUMMER_AFTERNOON_ENDHOUR, SUMMER_AFTERNOON_ENDMIN, SUMMER_NIGHT_BEGINHOUR, SUMMER_NIGHT_BEGINMIN, SUMMER_NIGHT_ENDMIN, SUMMER_NIGHT_ENDHOUR, WINTER_BEGIN_MONTH, WINTER_BEGIN_DAY, WINTER_END_MONTH, WINTER_END_DAY, WINTER_MORNING_BEGINHOUR, WINTER_MORNING_BEGINMIN, WINTER_MORNING_ENDHOUR, WINTER_MORNING_ENDMIN, WINTER_AFTERNOON_BEGINHOUR, WINTER_AFTERNOON_BEGINMIN, WINTER_AFTERNOON_ENDHOUR, WINTER_AFTERNOON_ENDMIN, WINTER_NIGHT_BEGINHOUR, WINTER_NIGHT_BEGINMIN, WINTER_NIGHT_ENDHOUR, WINTER_NIGHT_ENDMIN, ILLUMINATION_OPEN, ILLUMINATION_CLOSE, BACKLASH_TOTAL, ILLUMINATION_DELAY)
+values ('11111111111111111111111111111111', '', '05', '01', '09', '30', '08', '00', '12', '00', '14', '30', '18', '00', '19', '00', '00', '22', '10', '01', '04', '30', '08', '00', '11', '30', '14', '00', '17', '30', '19', '00', '22', '00', 150, 250, 50, 15);
+
+commit;
+
+/**教室照明部分结束
+**/
+spool off
+commit;

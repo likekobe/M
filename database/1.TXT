@@ -1,0 +1,83 @@
+-- Alter table 
+alter table US_ZWJ
+  storage
+  (
+    next 1
+  )
+;
+-- Add/modify columns 
+alter table US_ZWJ add PK_UDP_INFO CHAR(32);
+-- Alter table 
+alter table US_WATERMETER_INFO
+  storage
+  (
+    next 8
+  )
+;
+-- Add/modify columns 
+alter table US_WATERMETER_INFO add PK_UDP_INFO CHAR(32);
+-- Create table
+create table US_UDP_INFO
+(
+  PK_UDP_INFO  CHAR(32) not null,
+  GATEWAY_ID   CHAR(32),
+  IP_ADDRESS   VARCHAR2(15),
+  REMOTEPORT   NUMBER(5),
+  LOCALPORT    NUMBER(5),
+  DISABLED     CHAR(1),
+  INTERMISSION NUMBER(3),
+  TOGATEWAY    CHAR(1)
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table US_UDP_INFO
+  add constraint PK primary key (PK_UDP_INFO);
+  -- Alter table 
+alter table US_ELECMETER_INFO
+  storage
+  (
+    next 1
+  )
+;
+drop table BS_ORIGINALDATA;
+-- Add/modify columns 
+alter table US_ELECMETER_INFO add PK_UDP_INFO CHAR(32);
+-- Create table
+create table BS_ORIGINALDATA
+(
+  DATA_ID            CHAR(32) not null,
+  ELEC_METER_ID      CHAR(32),
+  COL_DATE           VARCHAR2(19) not null,
+  REPORT_DATE        VARCHAR2(19) not null,
+  DATA_DATE          VARCHAR2(19),
+  IS_NEW             CHAR(1),
+  WATER_METER_ID     CHAR(32),
+  WARM_METER_ID      CHAR(32),
+  GAS_METER_ID       CHAR(32),
+  ERROR_COUNTER      NUMBER(4),
+  RIGHT_COUNTER      NUMBER(4),
+  TOTAL_USED         NUMBER(13,3),
+  TOTAL_BUY          NUMBER(13,3),
+  VOLTAGE            NUMBER(3),
+  ELECTRIC_CURRENT   NUMBER(6,2),
+  POWER              NUMBER(7,1),
+  A_VOLTAGE          NUMBER(3),
+  B_VOLTAGE          NUMBER(3),
+  C_VOLTAGE          NUMBER(3),
+  A_ELECTRIC_CURRENT NUMBER(6,2),
+  B_ELECTRIC_CURRENT NUMBER(6,2),
+  C_ELECTRIC_CURRENT NUMBER(6,2),
+  A_POWER            NUMBER(7,1),
+  B_POWER            NUMBER(7,1),
+  C_POWER            NUMBER(7,1),
+  BATCHNO            CHAR(32)
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table BS_ORIGINALDATA
+  add constraint PK_BS_ORIGINALDATA primary key (DATA_ID);
+alter table BS_ORIGINALDATA
+  add constraint FKF1AE3E297BE4A59E foreign key (WATER_METER_ID)
+  references US_WATERMETER_INFO (METER_ID);
+alter table BS_ORIGINALDATA
+  add constraint FKF1AE3E29C95A04D8 foreign key (ELEC_METER_ID)
+  references US_ELECMETER_INFO (METER_ID);
+

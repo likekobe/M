@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- like begin -->
+		<!-- 每天0点 开始计算每小时的能耗用量数据 -->
+		<!-- <bean id="gatherEnergyDataJobService" class="com.cgdz.ecms.job.AcBackStage.GatherEnergyDataJobService">
+			<property name="energyDao" ref="EnergyDao"></property>
+			<property name="eachEnergyDao" ref="EachEnergyDao"></property>
+			<property name="contorlDao" ref="ContorlDAO"></property>
+			<property name="usOrderDao" ref="UsOrderDao"></property>
+		</bean> -->
+
+	<!-- like end -->
+
+	
+
+</beans>
+
+

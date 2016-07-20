@@ -1,0 +1,44 @@
+
+/***
+线条的CSS
+***/
+#special_table tr th{text-align:center;vertical-align:middle;}
+#special_table tr td{text-align:center;vertical-align:middle;}
+.page-first, .page-pre, .page-next, .page-last, .page-jump {
+	display:inline-block;  
+	width:22px;
+	height:16px;
+    cursor:pointer;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+}
+.page-first { background-image:url(../image2/y_01.gif);}
+.page-pre   { background-image:url(../image2/y_02.gif);}
+.page-next  { background-image:url(../image2/y_04.gif);}
+.page-last  { background-image:url(../image2/y_03.gif);}
+.page-jump  { background-image:url(../image2/y_05.gif);}
+
+
+/***
+登陆
+***/
+.login-body {
+	background-image: url(../image2/login.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.login-image01 {
+	background-image:url(images/loa_01.jpg);
+	background-position:center;
+    background-repeat: no-repeat;
+}
+.login-image02 {
+	background-image:url(images/loa_02.jpg) ;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+.login-image03 {
+	background-image:url(images/loa_03.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
